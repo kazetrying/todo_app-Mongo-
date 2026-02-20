@@ -1,0 +1,57 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<div class="min-vh-100 d-flex align-items-center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="text-center mb-4">
+          <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white mb-3" style="width:70px;height:70px;">
+            <i class="bi bi-check2-circle text-primary" style="font-size:2rem;"></i>
+          </div>
+          <h2 class="text-white fw-bold">TodoApp</h2>
+          <p class="text-white-50">Quản lý công việc hiệu quả</p>
+        </div>
+        
+        <div class="card p-4">
+          <h4 class="fw-bold mb-4 text-center">Đăng nhập</h4>
+
+          <% if (error && error.length > 0) { %>
+            <div class="alert alert-danger"><i class="bi bi-exclamation-circle me-2"></i><%= error %></div>
+          <% } %>
+          <% if (success && success.length > 0) { %>
+            <div class="alert alert-success"><i class="bi bi-check-circle me-2"></i><%= success %></div>
+          <% } %>
+
+          <form action="/auth/login" method="POST">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Username</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="bi bi-person"></i></span>
+                <input type="text" name="username" class="form-control border-start-0 ps-0" placeholder="Nhập username" required>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label fw-semibold">Password</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
+                <input type="password" name="password" class="form-control border-start-0 ps-0" placeholder="Nhập password" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-2">
+              <i class="bi bi-box-arrow-in-right me-2"></i>Đăng nhập
+            </button>
+          </form>
+          
+          <hr>
+          <p class="text-center text-muted mb-0">
+            Chưa có tài khoản? 
+            <a href="/auth/register" class="text-primary fw-semibold">Đăng ký ngay</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
