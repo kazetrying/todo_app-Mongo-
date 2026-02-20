@@ -1,8 +1,8 @@
-# 📝 TodoApp - Full Stack Node.js + MongoDB + EJS
+#  TodoApp - Full Stack Node.js + MongoDB + EJS
 
 Ứng dụng Todo List đầy đủ với 3 level tính năng.
 
-## 🚀 Cài đặt & Chạy
+##  Cài đặt & Chạy
 
 ### 1. Yêu cầu
 - Node.js >= 16
@@ -32,7 +32,7 @@ Truy cập: **http://localhost:3000**
 
 ---
 
-## 📁 Cấu trúc thư mục
+##  Cấu trúc thư mục
 
 ```
 todo-app/
@@ -61,7 +61,7 @@ todo-app/
 
 ---
 
-## 🗄️ MongoDB Schema
+##  MongoDB Schema
 
 ### Collection: `users`
 ```js
@@ -122,35 +122,35 @@ todo-app/
 
 ---
 
-## 🎯 Tính năng theo Level
+##  Tính năng theo Level
 
 ### Level 1 - API
-- ✅ Mã hóa password bằng **bcryptjs**
-- ✅ Username unique
-- ✅ 1 user nhiều task, 1 task thuộc 1 creator
-- ✅ `getAllTasks` - lấy tất cả task
-- ✅ `getByUsername` - lấy task theo username
-- ✅ `getTodayTasks` - task trong ngày
-- ✅ `getPendingTasks` - task chưa hoàn thành
-- ✅ `getTasksByLastName` - task của user có họ Nguyễn (hoặc họ khác)
+-  Mã hóa password bằng **bcryptjs**
+-  Username unique
+-  1 user nhiều task, 1 task thuộc 1 creator
+-  `getAllTasks` - lấy tất cả task
+-  `getByUsername` - lấy task theo username
+-  `getTodayTasks` - task trong ngày
+-  `getPendingTasks` - task chưa hoàn thành
+-  `getTasksByLastName` - task của user có họ Nguyễn (hoặc họ khác)
 
 ### Level 2 - Giao diện EJS
-- ✅ Trang chính với input, nút thêm, danh sách (ul)
-- ✅ Thêm công việc vào danh sách
-- ✅ Nút Xóa cho từng task
-- ✅ **Progress Bar Bootstrap** hiển thị tiến độ hoàn thành
-- ✅ Thống kê (tổng/hoàn thành/chưa xong/hôm nay)
-- ✅ Filter (Tất cả / Chưa xong / Hoàn thành / Hôm nay)
-- ✅ UI đẹp với Bootstrap 5
+-  Trang chính với input, nút thêm, danh sách (ul)
+-  Thêm công việc vào danh sách
+-  Nút Xóa cho từng task
+-  **Progress Bar Bootstrap** hiển thị tiến độ hoàn thành
+-  Thống kê (tổng/hoàn thành/chưa xong/hôm nay)
+-  Filter (Tất cả / Chưa xong / Hoàn thành / Hôm nay)
+-  UI đẹp với Bootstrap 5
 
 ### Level 3 - Phân quyền & Multi-assignee
-- ✅ 2 role: **admin** và **normal**
-- ✅ Admin có thể phân task cho nhiều user
-- ✅ 1 task có nhiều người cùng thực hiện
-- ✅ Task chỉ **hoàn thành khi TẤT CẢ** người được assign đều done
-- ✅ Mỗi người toggle done riêng
-- ✅ Progress bar hiển thị % người đã done
-- ✅ Admin có nút "Phân công thêm" cho từng task
+-  2 role: **admin** và **normal**
+-  Admin có thể phân task cho nhiều user
+-  1 task có nhiều người cùng thực hiện
+-  Task chỉ **hoàn thành khi TẤT CẢ** người được assign đều done
+-  Mỗi người toggle done riêng
+-  Progress bar hiển thị % người đã done
+-  Admin có nút "Phân công thêm" cho từng task
 
 ---
 
@@ -158,17 +158,17 @@ todo-app/
 
 | Hành động | Normal | Admin |
 |-----------|--------|-------|
-| Tạo task (chỉ cho bản thân) | ✅ | ✅ |
-| Tạo task & assign nhiều người | ❌ | ✅ |
-| Toggle done task của mình | ✅ | ✅ |
-| Phân công thêm vào task | ❌ | ✅ |
-| Xóa task của mình | ✅ | ✅ |
-| Xóa task của người khác | ❌ | ✅ |
-| Xem tất cả task | ❌ | ✅ |
+| Tạo task (chỉ cho bản thân) | có | có |
+| Tạo task & assign nhiều người | không | có |
+| Toggle done task của mình | có | có |
+| Phân công thêm vào task | không | có |
+| Xóa task của mình | có | có |
+| Xóa task của người khác | không | có |
+| Xem tất cả task | không | có |
 
 ---
 
-## 💡 Lưu ý
+## Lưu ý
 
 - Khi đăng ký, **họ** (`lastName`) được tự động tách từ ký tự đầu tiên của `fullName`
   - VD: fullName = "Nguyễn Văn A" → lastName = "Nguyễn"
