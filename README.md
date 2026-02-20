@@ -96,7 +96,7 @@ todo-app/
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Mô tả |
 |--------|----------|-------|
@@ -154,7 +154,7 @@ todo-app/
 
 ---
 
-## 🔐 Phân quyền
+## Phân quyền
 
 | Hành động | Normal | Admin |
 |-----------|--------|-------|
