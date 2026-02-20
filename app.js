@@ -10,8 +10,8 @@ const app = express();
 
 // Connect MongoDB
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ MongoDB connected!'))
-  .catch(err => console.error('❌ MongoDB error:', err));
+  .then(() => console.log('MongoDB connected!'))
+  .catch(err => console.error('MongoDB error:', err));
 
 // Template engine
 app.set('view engine', 'ejs');
@@ -57,5 +57,5 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server đang chạy tại http://localhost:${PORT}`);
+  console.log(`Server đang chạy tại http://localhost:${PORT}`);
 });
